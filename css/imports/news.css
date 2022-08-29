@@ -11,6 +11,7 @@
     height: 90vh;
     margin-left: auto;
     margin-right: auto;
+    color: var(--background-color);
     background-color: #999;
     background: url(assets/forest-pexels-markus-spiske-2818573.jpg);
 }
@@ -27,13 +28,13 @@
 }
 
 .news-container {
-    background: #fff;
+    background: wheat;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     border-radius: 10px;
     border-top: 6px solid var(--main-green);
-    padding: 20px;
+    padding: 30px;
     gap: 2rem;
 }
 

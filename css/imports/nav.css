@@ -120,6 +120,9 @@ header.active ul.nav-links a {
     .contact-details h2 {
         font-size: 1.6rem;
     }
+    .search-text h1 {
+        margin: 12rem 0 2rem 0;
+    }
 }
 
 @media(max-width: 366px) {

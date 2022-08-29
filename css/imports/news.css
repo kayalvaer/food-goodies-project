@@ -11,8 +11,8 @@
     height: 90vh;
     margin-left: auto;
     margin-right: auto;
-    color: var(--background-color);
-    background-color: rgb(123, 90, 49);
+    color: rgb(123, 90, 49);
+    background-color: rgb(212, 205, 197);
     /* background: url(assets/forest-pexels-markus-spiske-2818573.jpg); */
 }
 

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Food Mood</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="./css/normalize.css" /> -->
+</head>
+
+<body>
+    <!-- nav  -->
+    <header>
+        <a href="index.html">
+            <h1 class="logo">
+                <img src="./assets/diet.png" alt="Good Food Mood" />
+                <span class="logo-text">Goodies</span> <span class="logo-dot">.</span>
+            </h1>
+        </a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#recipes">Recipes</a></li>
+            <li><a href="#contact" class="contact-link">Contact</a></li>
+            <li>
+                <a href="#"><i class="bx bx-heart favourite"></i>Likes</a>
+            </li>
+        </ul>
+    </header>
+    <!-- end of nav -->
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-text">
+            <span class="hero-span">Welcome To Food for Care</span>
+            <h1>Good Mood Healthy <br>Recipes</h1>
+            <p>We got you covered !</p>
+            <a href="#recipes" class="btn-hero">Search meals</a>
+        </div>
+        <div class="hero-img">
+            <img src="./assets/olive-oil copy.png" alt="hero image" />
+        </div>
+    </section>
+
+    <!-- end of Hero -->
+    <!-- About -->
+    <section class="news" id="news">
+        <h1>Subscribe to get latest News</h1>
+        <div class="news-container">
+            <div class="news-wrapper">
+                <div class="latest-recipe">
+                    <img src="./assets/gallery-img-5.jpg" alt="popular recipes">
+                </div>
+                <h3>Chicken recipe</h3>
+                <p>Calories: 110</p>
+            </div>
+            <!-- Box 2 -->
+            <div class="news-wrapper">
+                <div class="latest-recipe">
+                    <img src="./assets/gallery-img-3.jpg" alt="popular recipes">
+                </div>
+                <h3>Chicken recipe</h3>
+                <p>Calories: 110</p>
+            </div>
+
+            <!-- Box 3 -->
+            <div class="news-wrapper">
+                <div class="latest-recipe">
+                    <img src="./assets/gallery-img-6.jpg" alt="popular recipes">
+                </div>
+                <h3>Chicken recipe</h3>
+                <p>Calories: 110</p>
+            </div>
+            <!-- Box 4 -->
+            <div class="news-wrapper">
+                <div class="latest-recipe">
+                    <img src="./assets/pexels-cats-coming-406152-2.jpg" alt="popular recipes">
+                </div>
+                <h3>Chicken recipe</h3>
+                <p>Calories: 110</p>
+            </div>
+        </div>
+        <img src="/assets/fruits-img.png" class="news-img" alt="" />
+    </section>
+    <!-- end news section -->
+    <!-- Start Recipe Section -->
+    <Section class="recipe" id="recipes">
+        <div class="search-text">
+            <h1 class="move-right move-on-scroll">
+                Eat Good Mood Food!
+            </h1>
+            <p class="move-right move-on-scroll pause-2">
+                <h2 class="header">Find Quick Heathy Recipes</h2>
+            </p>
+            <blockquote>
+                " Real food does not have ingredients, real food is ingredients. "<br>
+                <cite>
+                    - Jamie Oliver
+                </cite>
+            </blockquote>
+        </div>
+        <div class="search-container">
+            <form class="search-recipe">
+                <input type="text" class="search-container" placeholder="Enter your ingredient choice" id="search-info" />
+                <button class="search-button primary-btn " id="search-button ">
+                    <div class="bx bx-search " id="search-alt "></div>
+                </button>
+            </form>
+            <div class="recipe-container ">
+
+                <!-- <div class="recipe-wrap ">
+                    <div class="recipe-img ">
+                        <img src="./assets/gallery-img-5.jpg " alt="recipe one " />
+                    </div>
+                    <h3>Tasty recipe</h3>
+                    <h2>Calories taken:100</h2>
+                    <i class="bx bx-heart "></i>
+                    <a class="recipe-btn " href="# ">view recipe</a>
+                </div> -->
+
+            </div>
+        </div>
+    </Section>
+    <!-- End Recipe Section -->
+    <!-- Start Contact Section -->
+    <section class="contact-section " id="contact ">
+        <div class="title contact-title ">
+            <h2 class="contact-heading ">Get in touch . .</h2>
+            <p>Lorem Ipsum</p>
+        </div>
+        <div class="contact-wrapper ">
+            <div class="contact-details ">
+                <h2>Contact Us</h2>
+                <p>Lorem Ipsum</p>
+                <div class="details-address ">
+                    <i class="bx bxs-map "><span>55 Avenue Streeet,Ireland 1001</span></i>
+                    <i class="bx bxs-phone "><span>55 555 5555</span></i>
+                    <i class="bx bxs-envelope "><span>info@goodie.com</span></i>
+                </div>
+                <div class="social-icons ">
+                    <a href="# "><i class='bx bxl-facebook'></i></a>
+                    <a href="# "><i class="bx bxl-twitter "></i></a>
+                    <a href="# "><i class="bx bxl-instagram "></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form ">
+                <form action=" ">
+                    <div class="validation-group">
+                        <input type="text " placeholder="Enter your name " id="person-name" onkeyup="validatePerson()">
+                        <span id="name-fail"></span>
+                    </div>
+                    <div class="validation-group">
+                        <input type="tel " name=" " id=" " placeholder="Enter your phone " id="person-phone" onkeyup="validatePhone()">
+                        <span id="phone-fail "></span>
+                    </div>
+                    <div class="validation-group ">
+                        <input type="email " name=" " id=" " placeholder="Enter Email " id="person-email" onkeyup="validateEmail()">
+                        <span id="email-fail "></span>
+                    </div>
+                    <div class="validation-group ">
+                        <textarea name=" " id=" " cols="30 " rows="10 " placeholder="Write message " id="person-msg" onkeyup="validateMsg()"></textarea>
+                        <span id="msg-fail "></span>
+                    </div>
+                    <button onclick="return validateForm" class="validation-group ">
+                        <input type="button " value="Submit " class="btn contact-btn " id="person-msg" onkeyup="validateMsg()" />
+                        <span id='submit-fail'></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- End contact Section -->
+    <!-- footer -->
+    <footer class=" footer ">
+        <p>
+            &#169;<span id="date "></span>
+            <span class="footer-logo ">Goodies Recipe App</span> Built by
+            <a href="https://www.kaylvaer.com/ ">Kay Alvaer</a>
+        </p>
+    </footer>
+    <script src="./js/main.js "></script>
+</body>
+
+</html>

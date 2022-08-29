@@ -1,0 +1,58 @@
+/* Hero section */
+
+.hero {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: url(/assets/footer-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    gap: 1rem;
+}
+
+.hero-text {
+    flex: 1 1 17rem;
+    padding-top: 6rem;
+}
+
+.hero-img {
+    flex: 1 1 17rem;
+}
+
+.hero-span {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--header-gray);
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    color: var(--main-green);
+    margin: 2rem 0 2rem 0;
+}
+
+.hero-text p {
+    letter-spacing: 1.5px;
+    font-size: 18px;
+    margin: 2rem 0 2rem 0;
+    color: var(--background-color);
+}
+
+.btn-hero {
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: 2px solid var(--header-gray);
+    font-weight: 500;
+    color: var(--main-green);
+}
+
+.btn-hero:hover {
+    background: var(--header-gray);
+    color: var(--primary-white);
+    letter-spacing: 2px;
+}

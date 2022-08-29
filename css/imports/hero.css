@@ -33,7 +33,7 @@
 .hero-text h1 {
     font-size: 4rem;
     color: var(--main-green);
-    margin: 2rem 0 2rem 0;
+    margin: 2rem 0 4rem 0;
 }
 
 .hero-text p {
@@ -49,6 +49,7 @@
     border: 2px solid var(--header-gray);
     font-weight: 500;
     color: var(--main-green);
+    margin-bottom: 3rem;
 }
 
 .btn-hero:hover {

@@ -6,7 +6,7 @@
     font-size: 3rem;
     color: var(--background-color);
     margin-bottom: 1.5rem;
-    margin-top: 6rem;
+    /* margin-top: 6rem; */
 }
 
 .recipe-container {
@@ -94,7 +94,7 @@
     display: block;
     align-self: flex-start;
     letter-spacing: 1.5px;
-    width: 160px;
+    width: 140px;
     padding: 4px 8px 4px 18px;
     border-radius: 5px;
     margin: 25px 0 30px 18px;

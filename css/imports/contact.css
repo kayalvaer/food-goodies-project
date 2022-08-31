@@ -8,6 +8,7 @@
     flex: 1 1 20rem;
     justfy-content: center;
     display: flex;
+    position: relative;
 }
 
 .contact-form input {
@@ -31,14 +32,14 @@ textarea {
     padding: 18.5px;
     outline: none;
     margin-bottom: 1rem;
-    border: 2px solid var(--grey-300);
+    border: 2px solid var(--grey-200);
     box-shadow: 0 4px 4px 2px rgb(14 55 54/ 15%);
     font-size: 20px;
 }
 
 form-input::placeholder,
 textarea::placeholder {
-    color: var(--background-color);
+    color: var(--grey-200);
 }
 
 form textarea {
@@ -52,25 +53,86 @@ form .contact-btn {
     text-transform: uppercase;
     font-weight: bold;
     border: none;
-    font-size: 15px;
+    font-size: 20px;
     text-align: center;
     letter-spacing: 2px;
     cursor: pointer;
+    transition: all 0.5s;
+    padding: 20px;
 }
 
 form .contact-btn:hover {
     background: var(--header-gray);
 }
 
-form .validation-group {
+.hide {
+    display: none;
+}
+
+.contact-form button {
+    border: none;
+}
+
+form .validation-group span {
     font-size: 14px;
     bottom: 20px;
     margin-top: 0;
     color: var(--red-dark);
 }
 
-.validation-group span#name-fail {
+.input-warning {
+    border: 1px solid red;
+}
+
+.error-msg {
+    color: var(--red-dark);
+}
+
+.contact-form form.error-msg {
+    color: var(--red-dark);
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+.contact-form form .error-border {
+    border-bottom: var(--red-dark);
+}
+
+#success {
     color: var(--main-green);
+}
+
+.success-msg {
+    font-size: 20px;
+    text-align: center;
+    color: var(--main-green);
+    padding: 20px;
+    font-style: italic;
+}
+
+label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+form.hide {
+    opacity: 0;
+}
+
+
+/* .validation-group span {
+    color: var(--main-green);
+    bottom: 12px;
+} */
+
+i.bx.bxs-message-rounded-check {
+    font-size: 30px;
+    padding: 5px;
+    color: var(--main-green);
+    position: absolute;
+    left: 22rem;
+    top: 15px;
 }
 
 .contact-wrapper {

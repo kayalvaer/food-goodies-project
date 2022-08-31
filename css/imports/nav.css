@@ -62,12 +62,12 @@ header.active ul.nav-links a {
     }
 }
 
-@media(max-width: 991px) {
-    header {
-        padding: 18px 4%;
+@media(min-width: 991px) {
+    i.bx.bxs-message-rounded-check {
+        margin-left: 25rem;
     }
-    .section {
-        padding: 50px 4%;
+    .subscribe-wrap {
+        height: 30vh;
     }
 }
 
@@ -120,14 +120,35 @@ header.active ul.nav-links a {
     .contact-details h2 {
         font-size: 1.6rem;
     }
+    i .bx .bxs-message-rounded-check {
+        margin-left: 6rem;
+    }
+    input::placeholder {
+        font-size: 14px;
+    }
     .search-text h1 {
-        margin: 12rem 0 2rem 0;
+        margin: 52rem 0 2rem 0;
+    }
+    .subscribe-box button {
+        margin-left: 3rem;
+    }
+    .news {
+        height: 40vh;
     }
 }
 
 @media(max-width: 366px) {
     .hero-text span {
         font-size: 0.8rem;
+    }
+    section {
+        padding-top: 50px;
+    }
+    .news h1 {
+        font-size: 16px;
+    }
+    .search-text h1 {
+        margin: 40rem 0 2rem 0;
     }
     .hero-text h1 {
         font-size: 2rem;
@@ -139,7 +160,17 @@ header.active ul.nav-links a {
         gap: 3rem;
     }
     input {
-        padding: 15px;
+        padding: 10px;
+    }
+    i .bx .bxs-message-rounded-check {
+        margin-left: 14rem;
+    }
+    form-input::placeholder,
+    textarea::placeholder {
+        font-size: 10px;
+    }
+    .subscribe-box button {
+        margin-left: 3rem;
     }
 }
 

@@ -49,7 +49,7 @@
     <!-- end of Hero -->
     <!-- About -->
     <section class="news" id="news">
-        <h1>Subscribe to get latest News</h1>
+        <h1>Subscribe to sign up for a weekly newsletter with featured recipes.</h1>
         <div class="news-container">
             <div class="news-wrapper">
                 <div class="latest-recipe">
@@ -83,9 +83,21 @@
                 <h3>Salad recipes</h3>
                 <p>Eating salad is good fo you!</p>
             </div>
+
         </div>
-        <img src="./assets/fruits-img.png" class="news-img" alt="">
     </section>
+    <section class="subscribe-wrap">
+        <!-- <img src="./assets/fruits-img.png" class="news-img" alt=""> -->
+        <span class="subscribe-wrapper">
+            
+            <div class="subscribe-box">
+                <h2>Subscribe now!</h2>
+                <input type="text" name="emailAddress" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </div>
+        </span>
+    </section>
+
     <!-- end news section -->
     <!-- Start Recipe Section -->
     <Section class="recipe" id="recipes">
@@ -130,7 +142,8 @@
     <section class="contact-section " id="contact">
         <div class="title contact-title ">
             <h2 class="contact-heading ">Get in touch . .</h2>
-            <p>Lorem Ipsum</p>
+            <p class="contact-stmt">We'd really be happy to hear from you! Please fill in the formto contact us
+            </p>
         </div>
         <div class="contact-wrapper ">
             <div class="contact-details ">
@@ -148,29 +161,40 @@
                 </div>
             </div>
 
-            <div class="contact-form ">
-                <form action=" ">
+            <div class="contact-form " id="contactForm">
+                <form name="contact-form">
                     <div class="validation-group">
-                        <input type="text " placeholder="Enter your name " id="person-name" onkeyup="validatePerson()">
-                        <span id="name-fail"></span>
+                        <label>Full Name</label>
+                        <input name="name" placeholder="Full name" />
+                        <span class="error-msg hide">Name is required</span>
                     </div>
+
                     <div class="validation-group">
-                        <input type="tel " name=" " id=" " placeholder="Enter your phone " id="person-phone" onkeyup="validatePhone()">
-                        <span id="phone-fail "></span>
+                        <label>Email</label>
+                        <input name="email" placeholder="e.g. your_email@example.com" />
+                        <div class="error-msg hide">Email is invalid</div>
                     </div>
-                    <div class="validation-group ">
-                        <input type="email " name=" " id=" " placeholder="Enter Email " id="person-email" onkeyup="validateEmail()">
-                        <span id="email-fail "></span>
+
+                    <div class="validation-group">
+                        <label>Phone</label>
+                        <input name="phone" placeholder="Enter phone"></input>
+                        <div class="error-msg hide">Phone is invalid</div>
                     </div>
-                    <div class="validation-group ">
-                        <textarea name=" " id=" " cols="30 " rows="10 " placeholder="Write message " id="person-msg" onkeyup="validateMsg()"></textarea>
-                        <span id="msg-fail "></span>
+
+                    <div class="validation-group">
+                        <label>Message</label>
+                        <textarea name="message" placeholder="Your Message ..."></textarea>
+                        <div class="error-msg hide">Message is required</div>
                     </div>
-                    <div onclick="return validateForm" class="validation-group ">
-                        <input type="button " value="Submit " class="btn contact-btn " id="person-msg" onkeyup="validateMsg()" />
-                        <span id='submit-fail'></span>
-                    </div>
+
+                    <hr />
+
+                    <button type="submit" class="btn contact-btn ">SUBMIT FORM</button>
                 </form>
+
+            </div>
+            <div class="success-msg hide">
+                <h2>Thanks for contacting us, we will get back to you as soon as possible!</h2>
             </div>
         </div>
     </section>

@@ -69,73 +69,60 @@ function loadedHTML(results) {
 
 
 // Form validation
+//reference and thanks to "https://github.com/codyseibert/youtube/blob/master/js-contact-form-validation/index.html" for the code sample 
+const form = document.querySelector("form[name='contact-form']");
+const successMsg = document.querySelector(".success-msg");
+const nameContact = document.querySelector("input[name='name']");
+const emailContact = document.querySelector("input[name='email']");
+const phoneContact = document.querySelector("input[name='phone']");
+const messageContact = document.querySelector("textarea[name='message']");
 
-var nameValidation = document.getElementById('name-fail');
-var phoneValidation = document.getElementById('phone-fail');
-var emailValidation = document.getElementById('email-fail');
-var msgValidation = document.getElementById('msg-fail');
-var submitValidation = document.getElementById('submit-fail');
+nameContact.isValid = () => !!nameContact.value;
+emailContact.isValid = () => isValidEmail(emailContact.value);
+phoneContact.isValid = () => isValidPhone(phoneContact.value);
+messageContact.isValid = () => !!messageContact.value;
 
-function validatePerson(){
-    var name = document.getElementById('person-name').value;
+const inputFields = [nameContact, emailContact, phoneContact, messageContact];
 
-    if(name.length == 0){
-        nameValidation.innerHTML = 'Correct name required';
-        return false;
+const isValidEmail = (email) => {
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+};
+
+const isValidPhone = (phone) => {
+  const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+  return re.test(String(phone).toLowerCase());
+};
+
+let formValidate = false;
+let isFormValidation = false;
+
+const validateInputs = () => {
+  console.log("checked inputs entered");
+  if (!formValidate) return;
+
+  isFormValidation = true;
+  inputFields.forEach((input) => {
+    input.classList.remove("invalid");
+    input.nextElementSibling.classList.add("hide");
+
+    if (!input.isValid()) {
+      input.classList.add("invalid");
+      isFormValidation = false;
+      input.nextElementSibling.classList.remove("hide");
     }
-    if(!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)){
-        nameValidation.innerHTML = 'Fullname required';
-        return false;
-    }
-    nameValidation.innerHTML = 'Correct name input';
-    return true;
+  });
+};
 
-}
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  formValidate = true;
+  validateInputs();
+  if (isFormValidation) {
+    form.remove();
+    successMsg.classList.remove("hide")
+  }
+});
 
-function validatePhone(){
-    var phone = document.getElementById('person-phone').value;
+inputFields.forEach((input) => input.addEventListener("input", validateInputs));
 
-    if(phone.length !== 10){
-        phoneValidation.innerHTML = 'Correct phone number required';
-        return false;
-    }
-    if(!phone.match(/^[0-9]{10}$/)){
-        phoneValidation.innerHTML = 'Correct telephone required';
-        return false;
-    }
-
-    phoneValidation.innerHTML = 'Correct phone input';
-    return true;
-
-}
-
-function validateEmail(){
-    var email = document.getElementById('person-email').value;
-
-    if(email.length == 0){
-        emailValidation.innerHTML = 'Enter correct email format'
-        return false;
-    }
-    if(!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
-        emailValidation.innerHTML = 'Invalid email entry'
-        return false;
-    }
-
-    emailValidation.innerHTML = 'Correct email input';
-    return true;
-
-}
-
-function validateMsg(){
-    var message = document.getElementById('person-msg').value;
-    var required = 25;
-    var left = required - message.length;
-
-    if(left > 0){
-        msgValidation.innerHTML = left + 'Enter required message characters'
-        return false;
-    }
-
-    msgValidation.innerHTML = 'Correct message input';
-    return true;
-}

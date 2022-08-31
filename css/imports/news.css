@@ -22,7 +22,7 @@
 .news h1 {
     font-size: 2rem;
     color: var(--background-color);
-    margin: 2rem;
+    /* margin: 2rem; */
     test-transform: uppercase;
     letter-spacing: 2px;
 }
